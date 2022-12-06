@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import { useContext } from "react";
+import { CounterContext } from "../context/CounterContex";
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  const { counter } = useContext(CounterContext);
 
-export default Home
+  return <div>{counter}</div>;
+};
+
+export default Home;
